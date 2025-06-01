@@ -1,0 +1,14 @@
+---
+const { href, title, imgSrc } = Astro.props;
+---
+
+
+<a {...(href ? { href } : {})}>
+    <img title={title} src={imgSrc} />
+</a>
+
+<style>
+    a:visited, a:link, a:active, a:hover {
+        text-decoration: none;
+    }
+</style>

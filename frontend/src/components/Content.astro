@@ -1,0 +1,119 @@
+---
+import MdTitle from "./MdTitle.astro";
+import Marquee from "./Marquee.astro";
+---
+
+<div style="overflow-y: auto;" class="main-content">
+    <h1 class="title"><span style="color: #666">#</span> <span>mqlvin's homepage</span></h1>
+    <a class="text">Hi I'm Mqlvin (Melvin) and this is my homepage. I code various projects, backend and frontend, and run my own little home server on the side.</a>
+    <br>
+    <a class="text">I'm currently interested in backend development and embedded development, and have recently built a drawing machine and app.</a>
+    
+    <MdTitle title="Projects" />
+    <ul>
+        <li><a href="https://github.com/blot-bot-org/">Blot Bot</a> - A drawing machine, with a drawing designer app</li>
+        <li><a href="https://github.com/Mqlvin/wool-wars-plus">WoolWars+</a> - A QOL mod for the Wool Wars game on Hypixel</li>
+        <li><a href="https://github.com/Mqlvin/brain-bites">Brain Bites</a> - A group project, summarising videos using AI, entered as an Inversity entry (3rd place)</li>
+        <li><a href="https://github.com/Mqlvin/bear-game">"Bear Game"</a> - A multiplayer text-based game about bears. It's similar to Cluedo, with the storyline being dynamically generated each game.</li>
+    </ul>
+    <a>And various other projects behind the scenes...</a>
+
+    <MdTitle title="Langs" />
+    <ul>
+        <li>Experienced: Java, Python, JavaScript (+TS)</li>
+        <li>Intermediate: Rust, Kotlin</li>
+        <li>Beginner / Learning: C, C++, Rust</li>
+    </ul>
+    <a>I also can use markup languages for frontend development, but I tend not to because they are boring.</a>
+
+    <MdTitle title="Contacts / Socials" />
+    <ul>
+        <li><a href="">@mqlvin:nope.chat</a> - Matrix</li>
+        <li><a href="">@mqlvin</a> - Discord</li>
+        <li><a href="https://github.com/Mqlvin/">Mqlvin</a> - GitHub</li>
+        <li><a href="https://hypixel.net/members/mqlvin.3477231/">Mqlvin</a> - Hypixel Forums</li>
+    </ul>
+    <a>I'd prefer contact on Matrix, as I'll probably respond fastest there.</a>
+    
+    <div class="divider"></div>
+    <Marquee />
+    <div class="divider" style="margin-top: 10px !important;"></div>
+
+    <div style="width: 100%; display: flex; justify-content: space-between;">
+        <a class="footer">This website does not use JavaScript.</a>
+        <a class="footer">Mqlvin 2025</a>
+    </div>
+</div>
+
+<style>
+    .title {
+        font-size: 1.0em;
+        color: #FFF;
+        
+        position: relative;
+
+        margin-bottom: 20px;
+    }
+
+    .title::after {
+        content: "=================";
+
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+    a, li {
+        color: #FFF;
+        font-size: 14px;
+        letter-spacing: -0.5px;
+    }
+
+    ul {
+        list-style-type: square;
+        color: #FFF;
+
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    a:link, a:active {
+        color: #DFD;
+    }
+
+    a:visited {
+        color: #AFA;
+    }
+
+    .divider {
+        width: 100%;
+        height: 2px;
+
+        background-color: #444;
+
+        margin: 35px 0px 15px 0px;
+    }
+
+    .float-bottom {
+        flex-shrink: 0;
+        margin-top: auto;
+
+        width: 100%;
+    }
+
+    a.footer {
+        color: #888;
+    }
+
+    .main-content::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .main-content {
+        scrollbar-width: none;
+    }
+</style>

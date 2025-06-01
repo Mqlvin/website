@@ -1,0 +1,62 @@
+---
+import Content from "../components/Content.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+        <div class="page-container">
+            <Content />
+        </div>
+    </body>
+</html>
+
+
+<style>
+    * {
+        font-family: Roboto Mono, monospace;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        height: 100%;
+
+        background-color: #080504;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .page-container {
+        max-width: 600px;
+        width: 600px;
+        height: calc(100% - 40px);
+        padding: 20px 40px 20px 40px;
+
+        background-color: #181514;
+        border-left: 1px solid #282524;
+        border-right: 1px solid #282524;
+
+        overflow: auto;
+    }
+
+    .page-container::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .page-container {
+        scrollbar-width: none;
+    }
+</style>
