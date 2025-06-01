@@ -1,5 +1,5 @@
 # Build Astro static files
-FROM node:18 AS astro-builder
+FROM node AS astro-builder
 WORKDIR /app/frontend
 COPY frontend/ .
 RUN npm install && npm run build
@@ -12,7 +12,7 @@ COPY --from=astro-builder /app/frontend/dist ./dist
 RUN cargo build --release
 
 # Generate the final image
-FROM debian:bullseye-slim
+FROM debian:slim
 WORKDIR /app
 COPY --from=rust-builder /app/server/target/release/server .
 COPY --from=rust-builder /app/server/dist ./dist
