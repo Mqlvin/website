@@ -12,7 +12,7 @@ COPY --from=astro-builder /app/frontend/dist ./dist
 RUN cargo build --release
 
 # Generate the final image
-FROM debian:slim
+FROM debian:bookworm-slim
 WORKDIR /app
 COPY --from=rust-builder /app/server/target/release/server .
 COPY --from=rust-builder /app/server/dist ./dist
