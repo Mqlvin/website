@@ -5,16 +5,16 @@ import Marquee from "./Marquee.astro";
 
 <div style="overflow-y: auto;" class="main-content">
     <h1 class="title"><span style="color: #666">#</span> <span>mqlvin.dev</span></h1>
-    <a class="text">Hi I'm Mqlvin (Melvin) and this is my homepage. I code various projects, backend and frontend, and run my own little home server on the side.</a>
+    <a class="text">Hi I'm Mqlvin (Melvin) and this is my homepage. I code various projects, backend and frontend, and run my own (little) home server on the side.</a>
     <br>
-    <a class="text">I'm currently interested in backend development and embedded development, and have recently built a drawing machine and app.</a>
+    <a class="text">I'm currently interested in backend development and embedded development, and have recently built a drawing machine with an accompanying app.</a>
     
     <MdTitle title="Projects" />
     <ul>
         <li><a href="https://github.com/blot-bot-org/">Blot Bot</a> - A drawing machine, with a drawing designer app</li>
         <li><a href="https://github.com/Mqlvin/wool-wars-plus">WoolWars+</a> - A QOL mod for the Wool Wars game on Hypixel</li>
         <li><a href="https://github.com/Mqlvin/brain-bites">Brain Bites</a> - A group project, summarising videos using AI, entered as an Inversity entry (3rd place)</li>
-        <li><a href="https://github.com/Mqlvin/bear-game">"Bear Game"</a> - A multiplayer text-based game about bears. It's similar to Cluedo, with the storyline being dynamically generated each game.</li>
+        <li><a href="https://github.com/Mqlvin/bear-game">Bear Game</a> - A multiplayer text-based game about bears. It's similar to Cluedo, with the storyline being dynamically generated each game.</li>
     </ul>
     <a>And various other projects behind the scenes...</a>
 
@@ -24,7 +24,7 @@ import Marquee from "./Marquee.astro";
         <li>Intermediate: Rust, Kotlin</li>
         <li>Beginner / Learning: C, C++, Rust</li>
     </ul>
-    <a>I also can use markup languages for frontend development, but I tend not to because they are boring.</a>
+    <a>I can also use markup languages for frontend development, but I tend not to because they are boring.</a>
 
     <MdTitle title="Contacts / Socials" />
     <ul>
@@ -64,7 +64,7 @@ import Marquee from "./Marquee.astro";
 
     a, li {
         color: #FFF;
-        font-size: 14px;
+        font-size: 14.5px;
         letter-spacing: -0.5px;
     }
 
@@ -80,28 +80,28 @@ import Marquee from "./Marquee.astro";
         margin: 5px 0;
     }
 
-    a:link, a:active {
-        color: #DFD;
+    a:link, a:visited {
+        color: #2fe0b1;
+        text-decoration: none;
     }
 
-    a:visited {
-        color: #AFA;
+    a:link:hover {
+        text-decoration: underline;
+    }
+
+    a[href]:not([href=""])::after {
+        content: " 🡥";
+        font-size: 10px;
+        color: #888;
     }
 
     .divider {
         width: 100%;
-        height: 2px;
+        height: 1px;
 
         background-color: #444;
 
         margin: 35px 0px 15px 0px;
-    }
-
-    .float-bottom {
-        flex-shrink: 0;
-        margin-top: auto;
-
-        width: 100%;
     }
 
     a.footer {
